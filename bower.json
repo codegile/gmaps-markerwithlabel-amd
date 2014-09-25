@@ -1,0 +1,9 @@
+{
+    "name": "google-markerwithlabel",
+    "version": "1.1.9",
+    "main": "src/markerwithlabel-amd.js",
+    "ignore": [
+        "LICENSE",
+        "README.md"
+    ]
+}
