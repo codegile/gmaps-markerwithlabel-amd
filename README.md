@@ -1,7 +1,7 @@
 gmaps-markerwithlabel-amd
 =========
 Based on [Google Maps MarkerWithLabel 1.1.9](http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/).
-This is basically a fork that adds src/markerwithlabel-amd.js.
+This is basically a fork that adds [`src/markerwithlabel-amd.js`](https://github.com/lupugabriel1/gmaps-markerwithlabel-amd/blob/master/src/markerwithlabel-amd.js).
 
 This extension offers AMD support for Google Maps MarkerWithLabel utility library of Google Maps Javascript API v3. Also fixes the problem with requirejs optimizer.
 Dependencies
@@ -14,7 +14,7 @@ bower install google-markerwithlabel
 ```
 
 ```
-git clone https://github.com/lupugabriel1/gmaps-markerwithlabel-amd
+git clone https://github.com/lupugabriel1/gmaps-markerwithlabel-amd.git
 ```
 Usage
 ----
