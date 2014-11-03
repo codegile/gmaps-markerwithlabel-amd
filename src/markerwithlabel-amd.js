@@ -1,8 +1,8 @@
 /**
  * @name MarkerWithLabel for V3
- * @version 1.1.9 [March 6, 2014]
- * @author Gary Little (inspired by code from Marc Ridey of Google).
- * @copyright Copyright 2012 Gary Little [gary at luxcentral.com]
+ * @version 1.1.10 [November 3, 2014]
+ * @author Lupu Gabriel (adapted from Gary Little (inspired by code from Marc Ridey of Google)).
+ * @copyright Copyright 2014 Lupu Gabriel [lupugabriel1 at gmail.com]
  * @fileoverview MarkerWithLabel extends the Google Maps JavaScript API V3
  *  <code>google.maps.Marker</code> class.
  *  <p>
@@ -38,10 +38,10 @@
 (function(factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['async!https://maps.googleapis.com/maps/api/js?sensor=false'], factory);
+        define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyD1O9N-77QOCYJ6wgsbJWgJYBJWd3K_VJg&sensor=false'], factory);
     } else if (typeof exports === 'object') {
         // CommonJS
-        module.exports = factory(require('async!https://maps.googleapis.com/maps/api/js?sensor=false'));
+        module.exports = factory(require('async!https://maps.googleapis.com/maps/api/js?key=AIzaSyD1O9N-77QOCYJ6wgsbJWgJYBJWd3K_VJg&sensor=false'));
     } else {
         // Globals
         factory(google);
@@ -78,6 +78,7 @@
       this.handCursorURL_ = marker.handCursorURL;
 
       this.labelDiv_ = document.createElement("div");
+      this.labelDiv_.appendChild(document.createElement("div"));
       this.labelDiv_.style.cssText = "position: absolute; overflow: hidden;";
 
       // Set up the DIV for handling mouse events in the label. This DIV forms a transparent veil
@@ -358,6 +359,7 @@
      */
     MarkerLabel_.prototype.setContent = function () {
       var content = this.marker_.get("labelContent");
+      content+= "<div class='inner'></div>";
       if (typeof content.nodeType === "undefined") {
         this.labelDiv_.innerHTML = content;
         this.eventDiv_.innerHTML = this.labelDiv_.innerHTML;

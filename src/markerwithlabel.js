@@ -1,8 +1,8 @@
 /**
  * @name MarkerWithLabel for V3
- * @version 1.1.9 [March 6, 2014]
- * @author Gary Little (inspired by code from Marc Ridey of Google).
- * @copyright Copyright 2012 Gary Little [gary at luxcentral.com]
+ * @version 1.1.10 [November 3, 2014]
+ * @author Lupu Gabriel (adapted from Gary Little (inspired by code from Marc Ridey of Google)).
+ * @copyright Copyright 2014 Lupu Gabriel [lupugabriel1 at gmail.com]
  * @fileoverview MarkerWithLabel extends the Google Maps JavaScript API V3
  *  <code>google.maps.Marker</code> class.
  *  <p>
@@ -344,6 +344,7 @@ MarkerLabel_.prototype.draw = function () {
  */
 MarkerLabel_.prototype.setContent = function () {
   var content = this.marker_.get("labelContent");
+  content+= "<div class='inner'></div>";
   if (typeof content.nodeType === "undefined") {
     this.labelDiv_.innerHTML = content;
     this.eventDiv_.innerHTML = this.labelDiv_.innerHTML;
