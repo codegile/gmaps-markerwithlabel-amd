@@ -38,10 +38,10 @@
 (function(factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['async!https://maps.googleapis.com/maps/api/js?key=AIzaSyD1O9N-77QOCYJ6wgsbJWgJYBJWd3K_VJg&sensor=false'], factory);
+        define(['async!https://maps.googleapis.com/maps/api/js?key=<api_key>'], factory);
     } else if (typeof exports === 'object') {
         // CommonJS
-        module.exports = factory(require('async!https://maps.googleapis.com/maps/api/js?key=AIzaSyD1O9N-77QOCYJ6wgsbJWgJYBJWd3K_VJg&sensor=false'));
+        module.exports = factory(require('async!https://maps.googleapis.com/maps/api/js?key=<api_key>'));
     } else {
         // Globals
         factory(google);
